@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: consumer-deployment
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: consumer
+
+  template:
+
+    metadata:
+      labels:
+        app: consumer
+
+    spec:
+
+      containers:
+
+      - name: consumer
+
+        image: bigdata-ml-consumer:latest
+
+        # imagePullPolicy: Never
+        imagePullPolicy: IfNotPresent
+
+        command:
+          ["python", "-m", "src.streaming.kafka_consumer"]

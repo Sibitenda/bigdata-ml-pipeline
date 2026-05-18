@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+venv/
+bigdata_real/
+
+data/
+models/
+
+.git/
+.ipynb_checkpoints/
+
+.env
