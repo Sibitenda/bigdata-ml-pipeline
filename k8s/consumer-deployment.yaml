@@ -23,10 +23,11 @@ spec:
 
       - name: consumer
 
-        image: bigdata-ml-consumer:latest
+        # image: bigdata-ml-consumer:latest
+        image: bigdata-ml-consumer:v2
 
-        # imagePullPolicy: Never
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Never
+        # imagePullPolicy: IfNotPresent
 
         command:
           ["python", "-m", "src.streaming.kafka_consumer"]

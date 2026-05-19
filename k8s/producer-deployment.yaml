@@ -23,10 +23,11 @@ spec:
 
       - name: producer
 
-        image: bigdata-ml-producer:latest
+        # image: bigdata-ml-producer:latest
+        image: bigdata-ml-producer:v2
 
-        # imagePullPolicy: Never
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Never
+        # imagePullPolicy: IfNotPresent
 
         command:
           ["python", "-m", "event_streaming.producer"]

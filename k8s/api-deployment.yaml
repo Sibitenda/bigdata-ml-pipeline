@@ -23,10 +23,11 @@ spec:
 
       - name: prediction-api
 
-        image: bigdata-ml-api:latest
+        # image: bigdata-ml-api:latest
+        image: bigdata-ml-api:v2
 
-        # imagePullPolicy: Never
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Never
+        # imagePullPolicy: IfNotPresent
 
         ports:
           - containerPort: 8000
